@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  angular-app:
+    build:
+      context: .
+    container_name: angular-dashboard
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: ng serve --host 0.0.0.0
