@@ -44,3 +44,14 @@ docker exec -it angular-container cat /app/hello.txt
 
 
 
+Run in a custom docker network
+----------------------------------
+
+docker network create my-first-network
+
+docker run --name docker-container-2 --rm -p 4200:4200 --network my-first-network angular2
+
+
+Use non root user 
+--------------------
+
